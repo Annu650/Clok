@@ -7,6 +7,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Hide horizontal scrollbar */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Optional: also hide scrollbar visually (but still scrollable) */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar invisible */
+}
+
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -12,7 +12,7 @@ function Sidebar() {
   const activeClasses = "bg-purple-100 text-purple-700 font-medium";
 
   const navItems = [
-    { href: "/", label: "Dashboard", icon: <FaTachometerAlt /> },
+    { href: "/Dashboard", label: "Dashboard", icon: <FaTachometerAlt /> },
     { href: "/Jobs", label: "Jobs", icon: <FaBriefcase /> },
     { href: "/Reminder", label: "Reminders", icon: <FaBell /> },
     { href: "/Setting", label: "Settings", icon: <FaCog /> },
@@ -22,7 +22,7 @@ function Sidebar() {
     <div className="h-screen w-64 bg-white shadow-md flex flex-col">
       {/* Logo */}
       <div className="flex items-center justify-center py-6 border-b">
-        <h1 className="text-2xl font-bold text-purple-600">★ Logo</h1>
+        <h1 className="text-2xl font-bold text-purple-600">Clok.</h1>
       </div>
 
       {/* Navigation */}
