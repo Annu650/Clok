@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Sidebar from "@/components/common/Sidebar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 
 export default function Jobs() {
   const [jobs, setJobs] = useState([
@@ -30,8 +29,9 @@ export default function Jobs() {
     deadline: "",
     status: "To Apply",
   });
-
-  const handleChange = (e:any) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -122,13 +122,12 @@ export default function Jobs() {
                   <td className="p-2">{job.deadline}</td>
                   <td className="p-2">
                     <span
-                      className={`px-3 py-1 text-xs rounded-full ${
-                        job.status === "Applied"
+                      className={`px-3 py-1 text-xs rounded-full ${job.status === "Applied"
                           ? "bg-blue-100 text-blue-700"
                           : job.status === "Rejected"
-                          ? "bg-red-100 text-red-700"
-                          : "bg-gray-100 text-gray-700"
-                      }`}
+                            ? "bg-red-100 text-red-700"
+                            : "bg-gray-100 text-gray-700"
+                        }`}
                     >
                       {job.status}
                     </span>

@@ -7,7 +7,7 @@ function SignIn() {
         {/* Logo */}
         <div className="flex justify-center mb-6 flex-col items-center">
           <h1 className="text-2xl font-bold text-purple-600">CLOK</h1>
-          <p className="text-sm text-gray-500">Clok it. Don't miss it.</p>
+          <p className="text-sm text-gray-500">Clok it. Do not miss it.</p>
         </div>
 
         {/* Title */}
@@ -91,7 +91,8 @@ function SignIn() {
 
         {/* Sign Up */}
         <p className="mt-4 text-sm text-center text-gray-600">
-          Don’t have an account?{" "}
+          <p>Do not have an account?</p>
+          {" "}
           <a href="#" className="text-purple-600 font-medium hover:underline">
             Sign Up
           </a>
