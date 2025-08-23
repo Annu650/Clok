@@ -5,12 +5,13 @@ function SignIn() {
     <div className="flex items-center justify-center min-h-screen bg-white">
       <div className="w-full max-w-md p-8 bg-white shadow-md rounded-2xl border border-gray-200">
         {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <h1 className="text-2xl font-bold text-purple-600">★ Logo</h1>
+        <div className="flex justify-center mb-6 flex-col items-center">
+          <h1 className="text-2xl font-bold text-purple-600">CLOK</h1>
+          <p className="text-sm text-gray-500">Clok it. Don't miss it.</p>
         </div>
 
         {/* Title */}
-        <h2 className="text-xl font-semibold text-center mb-1">
+        <h2 className="text-xl font-semibold text-center mb-1 text-gray-500">
           Sign In to Clok
         </h2>
         <p className="text-gray-500 text-center mb-6">

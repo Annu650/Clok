@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Banner from "../components/Banner";
-import SignIn from "../pages/SignIn";
+import SignIn from "./Auth/page";
+import Dashboard from "./Dashboard/page";
+import Setting from "@/app/Setting/page";
 
 export default function Home() {
   return (
-    <div>
+    <div>      
+      {/* <SignIn/> */}
+      <Dashboard/>
       
-      <SignIn/>
     </div>
   );
 }
