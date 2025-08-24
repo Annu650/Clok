@@ -63,7 +63,7 @@ export default function LandingPage() {
           className="md:w-1/2 space-y-6"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Your ultimate partner for precise time tracking and project management.
+            Your ultimate partner for job tracking.
           </h1>
           <p className="text-gray-600">
             Easy setup. Team Collaboration. Smart Reminders.
