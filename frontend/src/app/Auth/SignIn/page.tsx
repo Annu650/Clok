@@ -1,6 +1,9 @@
+'use client'
 import React from "react";
+import { useRouter } from "next/navigation";
 
 function SignIn() {
+  const router = useRouter();
   return (
     <div className="flex items-center justify-center min-h-screen bg-white">
       <div className="w-full max-w-md p-8 bg-white shadow-md rounded-2xl border border-gray-200">
@@ -93,7 +96,7 @@ function SignIn() {
         <p className="mt-4 text-sm text-center text-gray-600">
           <p>Do not have an account?</p>
           {" "}
-          <a href="#" className="text-purple-600 font-medium hover:underline">
+          <a href="#" className="text-purple-600 font-medium hover:underline" onClick={() => router.push("/Auth/SignUp")}>
             Sign Up
           </a>
         </p>

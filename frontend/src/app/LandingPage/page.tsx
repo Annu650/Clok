@@ -3,9 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import FeedbackSection from "@/components/sections/Feedback";
+import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
   
+  const router = useRouter();
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -43,15 +46,16 @@ export default function LandingPage() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-purple-600 text-white px-5 py-2 rounded-lg shadow hover:bg-purple-700 transition"
+            onClick={() => router.push("/Auth/SignIn")}
+            className="bg-purple-600 text-white px-5 py-2 rounded-lg shadow hover:bg-purple-700 transition hover:cursor-pointer"
           >
-            Sign Up Now
+            Sign In
           </motion.button>
         </div>
       </motion.header>
 
       {/* Hero */}
-      <section className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-16">
+      <section className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-16 mt-5">
         <motion.div
           initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -67,6 +71,7 @@ export default function LandingPage() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => router.push("/Auth/SignUp")}
             className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-700 hover:cursor-pointer transition"
           >
             Get Started
@@ -80,7 +85,7 @@ export default function LandingPage() {
           className="md:w-1/2 mt-10 md:mt-0"
         >
           <Image
-            src="/landing-illustration.png"
+            src="/Bg.jpg"
             alt="Hero Illustration"
             width={500}
             height={400}
